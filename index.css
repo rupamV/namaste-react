@@ -119,14 +119,9 @@ li{
     justify-content: center;
     align-items: center;
 }
-.searchbar{
-    border: 1px solid black;
-    width: 250px;
-    margin: 10px;
+.searchbar{ 
     padding: 10px;
-    cursor: pointer;
 }
-
 .cardcontainer{
     display: flex;
     flex-wrap: wrap;
