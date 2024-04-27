@@ -258,3 +258,9 @@ button {
 button:hover {
     background-color: #0056b3;
 }
+.para{
+    font-size: 18px;
+    line-height: 1.5;
+    color: #666;
+    margin-bottom: 10px;
+}
