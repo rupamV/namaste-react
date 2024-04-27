@@ -38,7 +38,7 @@
 a{
     text-decoration: none;
     font-size: 20px;
-    color: #333;
+    color: #1a1919;
 }
 
 .log-btn {
@@ -146,6 +146,17 @@ input[type="text"] {
     margin: 20px;
     background-color: lightgray;
     animation: loading 1s infinite;
+}
+
+.shimmer-wrapper{
+    max-width: 600px;
+    height: 1000px;
+    margin: 5px auto;
+    padding: 20px;
+    background-color: lightgray;
+    animation: loading 1s infinite;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .menu {

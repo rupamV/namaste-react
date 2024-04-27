@@ -1,5 +1,5 @@
 import {useState,useEffect} from 'react';
-import Shimmer from './Shimmer';
+import MenuShimmer from './MenuShimmer';
 import { useParams } from 'react-router-dom';
 
 const Menu = () => {
@@ -23,7 +23,7 @@ const Menu = () => {
     }
 
     if(resInfo === null){
-        return <Shimmer/>
+        return <MenuShimmer/>
     }
 
     const {name,cuisines,costForTwoMessage} = resInfo?.cards[2]?.card?.card?.info;
