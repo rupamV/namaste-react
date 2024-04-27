@@ -1,8 +1,9 @@
 import Restcards from "./Restcards";
 import { useState,useEffect } from "react";
 import Shimmer from "./Shimmer";
+import { Link } from "react-router-dom";
 
-const Body = () =>{
+const Body = () => {
     const[listofrestaurants, setListofrestaurants]= useState([]);
     const[filteredres, setfilteredres]= useState([]);
     const[searchtext,setsearchtext]=useState("");
@@ -36,15 +37,15 @@ const Body = () =>{
             </div>
             <button className="btn" onClick={()=>{
                 const filteredlist=listofrestaurants.filter(
-                    (res)=>res.avgRating>4
+                    (res)=>res.info.avgRating>4
                 );
-                setListofrestaurants(filteredlist);
+                setfilteredres(filteredlist); 
             }}>
-                filter</button>
+                Top Rated Restaurants</button>
             <div className="cardcontainer">
             {
                 filteredres.map((restaurant)=>(
-                    <Restcards key={restaurant.info.id} resdata={restaurant}/>
+                    <Link key={restaurant.info.id} to={"/restaurants/"+restaurant.info.id}><Restcards  resdata={restaurant}/></Link>
                 ))
             }
             </div>  
