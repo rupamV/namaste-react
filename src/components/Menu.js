@@ -1,5 +1,4 @@
 import {useState,useEffect} from 'react';
-import MenuShimmer from './MenuShimmer';
 import { useParams } from 'react-router-dom';
 
 const Menu = () => {
@@ -22,9 +21,6 @@ const Menu = () => {
         }
     }
 
-    if (resInfo === null) {
-        return <MenuShimmer />
-    }
     
     const { name, cuisines, costForTwoMessage } = resInfo?.cards[2]?.card?.card?.info;
     
