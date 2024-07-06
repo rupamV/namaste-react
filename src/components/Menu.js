@@ -22,24 +22,23 @@ const Menu = () => {
         }
     }
 
-    if(resInfo === null){
-        return <MenuShimmer/>
+    if (resInfo === null) {
+        return <MenuShimmer />
     }
-
-    const {name,cuisines,costForTwoMessage} = resInfo?.cards[2]?.card?.card?.info;
-
+    
+    const { name, cuisines, costForTwoMessage } = resInfo?.cards[2]?.card?.card?.info;
+    
     return (
-        <div className='menu'>
-            <h1>{name}</h1>
-            <p>{cuisines.join(", ")} - {costForTwoMessage}</p>
-            <h2>Menu</h2>
-            <ul>
-                {itemCards.map((item) => (
-                    <li key={item.card.info.id}>{item.card.info.name} - {"Rs."} {item.card.info.price/100 || item.card.info.defaultPrice/100}</li>
-                ))}
+        <div className='menu bg-white shadow-lg rounded-lg p-6 m-4'>
+            <h1 className='text-2xl font-bold text-gray-800 mb-2'>{name}</h1>
+            <p className='text-gray-600 mb-4'>{cuisines.join(", ")} - {costForTwoMessage}</p>
+            <h2 className='text-xl font-semibold text-gray-800 mb-3'>Menu</h2>
+            <ul className='list-disc pl-5'>
+                {itemCards?.map((item) => (
+                    <li key={item.card.info.id} className='text-gray-700 mb-1'>{item.card.info.name} - <span className='font-semibold'>{"Rs."} {item.card.info.price / 100 || item.card.info.defaultPrice / 100}</span></li>
+                )) || []}
             </ul>
         </div>
     );
-};
-
+}
 export default Menu;
