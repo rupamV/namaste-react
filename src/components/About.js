@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 
+=======
+//aboutus
+>>>>>>> 54684687c24487a93de2e397303c3663efe8cc32
 import React from "react";
 
 const About = () => {
